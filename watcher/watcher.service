@@ -1,0 +1,8 @@
+[Unit]
+After=mysql.service
+
+[Service]
+ExecStart=/usr/lib/watcher/watch.sh
+StandardOutput=append:/var/log/watcher.log
+[Install]
+WantedBy=multi-user.target

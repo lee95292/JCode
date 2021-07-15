@@ -1,0 +1,11 @@
+#!/bin/sh
+'bash' '-c' 'echo "------------------------------------------------------"'
+'bash' '-c' 'echo "------- This is Ubuntu 20.04 image for J-Cloud -------"'
+'bash' '-c' 'echo "--- Run "sudo passwd ubuntu" to set your password ----"'
+'bash' '-c' 'echo "------------------------------------------------------"'
+'bash' '-c' 'echo "-------------- VS-Code Code-server Setup -------------"'
+'bash' '-c' 'printf "PASSWORD=%04d\n" `expr $RANDOM % 10000` > /etc/code-server.conf'
+'bash' '-c' 'echo "--- Connect SSH and check out code-server password  --"'
+'bash' '-c' 'echo "--------- via <cat /etc/code-server.conf>  -----------"'
+'bash' '-c' 'echo "------------------------------------------------------"'
+'bash' '-c' 'systemctl restart code-server@ubuntu.service'
