@@ -13,8 +13,9 @@ $ cd JCode
 $ install.sh
 ```
 
-3. JCloud 에서 제공하는 주소 및 포트 번호를 통해 JCode 접속 
-   (예. cse-students 프로젝트의 경우, 브라우저에서 203.254.143.217:10xxx 로 접속. xxx는 cse-students 내부 네트워크에서 본인 IP 주소 끝자리. 10.0.0.xxx)  
+3. JCloud 에서 제공하는 주소 및 포트 번호를 통해 JCode 접속  
+   (예. cse-students 프로젝트의 경우, 브라우저에서 203.254.143.217:10xxx 로 접속.  
+   xxx는 cse-students 내부 네트워크에서 본인 IP 주소 끝자리. 10.0.0.xxx)
 
 4. 성공한 경우 출력 예
 ```
