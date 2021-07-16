@@ -22,7 +22,7 @@ cp ./code-server/config.yaml ~/.config/code-server/
 
 num=`expr $RANDOM % 10000`
 num=$(seq -f "%04g" $num $num)
-echo $num
+#echo $num	#do not show the password
 sed -i "s/password:.*/password: $num/" ~/.config/code-server/config.yaml
 
 # Install extensions for code-server
