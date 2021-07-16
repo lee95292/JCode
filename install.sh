@@ -6,17 +6,28 @@
 ## 1.Install code-server (latest release)
 
 curl -fsSL https://code-server.dev/install.sh | sh
-cp ./code-server/config.yaml ~/.config/code-server
+
+# Register and start the code-server daemon
+sudo systemctl enable --now code-server@$USER
+
+echo "Waiting for creating config.yaml..."
+while [ ! -f ~/.config/code-server/config.yaml ];
+do
+	sleep 0.1
+done
+echo "Done!"
 
 # renew the password in the configuration file
+cp ./code-server/config.yaml ~/.config/code-server/
+
 num=`expr $RANDOM % 10000`
+num=$(seq -f "%04g" $num $num)
 echo $num
 sed -e "s/password:.*/password: $num/" ~/.config/code-server/config.yaml
 
 # Install extensions for code-server
 
-# Register and start the code-server daemon
-sudo systemctl enable --now code-server@ubuntu
+sudo systemctl restart code-server@ubuntu
 
 ## 2.Install Watcher-client
 
@@ -29,7 +40,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable watcher.service
 
 ## 3.Reset the cloud-init
-rm /var/lib/cloud/instances/*/sem/config_scripts_user
+sudo rm -rf /var/lib/cloud/instances/*/sem/config_scripts_user
 rm /home/ubuntu/.bash_history
-sudo rm /root/.bash_history
+#sudo rm /root/.bash_history	#no need to execute. no file
 
