@@ -23,11 +23,13 @@ cp ./code-server/config.yaml ~/.config/code-server/
 num=`expr $RANDOM % 10000`
 num=$(seq -f "%04g" $num $num)
 echo $num
-sed -e "s/password:.*/password: $num/" ~/.config/code-server/config.yaml
+sed -i "s/password:.*/password: $num/" ~/.config/code-server/config.yaml
 
 # Install extensions for code-server
 
-sudo systemctl restart code-server@ubuntu
+
+# Restart code-server daemon
+sudo systemctl restart code-server@ubuntu.service
 
 ## 2.Install Watcher-client
 
