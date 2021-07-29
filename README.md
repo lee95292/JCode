@@ -10,7 +10,7 @@ JCloud 에서 VS-Code 기반 Web-IDE 를 제공하기 위한 프로젝트 입니
 ```
 $ git clone https://github.com/hyunchan-park/JCode.git
 $ cd JCode
-$ install.sh
+$ ./install.sh
 ```
 
 3. JCloud 에서 제공하는 주소 및 포트 번호를 통해 JCode 접속  
