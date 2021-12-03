@@ -48,7 +48,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/watcher.service → 
 # Note
 - 현재 Watcher server 의 IP 주소는 10.0.0.254 로 고정되어 있음
 - install.sh 는 ubuntu 계정으로 수행하여야 함
-- ⚠ C/C++ Extension을 사용하려는 경우 [Install_VSIX][1] 를 참고하여 설치하여야 제대로 작동함.
+- ⚠ C/C++ Extension을 사용하려는 경우 [Install_VSIX.md][1] 를 참고하여 설치하여야 제대로 작동함.
 
 
 [1]: https://github.com/GangSSun/JCode/blob/dd075dbd3eeef236084842b097bb3212a49f5855/Install_By_VSIX.md "Install_VSIX"
