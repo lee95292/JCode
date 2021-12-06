@@ -43,9 +43,16 @@ Created symlink /etc/systemd/system/default.target.wants/code-server@ubuntu.serv
 Waiting for creating config.yaml...
 Done!
 Created symlink /etc/systemd/system/multi-user.target.wants/watcher.service → /etc/systemd/system/watcher.service.
+Installing extensions...                                          #install_jota_agent.sh 를 실행
+Extension 'jcode-jota.vsix' was successfully installed.           #jcode-jota extension의 설치 성공
 ```
 
 # Note
 - 현재 Watcher server 의 IP 주소는 10.0.0.254 로 고정되어 있음
 - install.sh 는 ubuntu 계정으로 수행하여야 함
+- ⚠ C/C++ Extension을 사용하려는 경우 [Install_VSIX.md][1] 를 참고하여 설치하여야 제대로 작동함.
+- JCode에서 실행가능 한 Extension에 대해서 궁금하신 경우 [Extension_For_JCode][2] 를 참고.
 
+
+[1]: https://github.com/GangSSun/JCode/blob/dd075dbd3eeef236084842b097bb3212a49f5855/Install_By_VSIX.md "Install_VSIX"
+[2]: https://github.com/GangSSun/JCode_Extension_Documentation/blob/99d8aa389d94fedcf78c8c9e96ca916ab9047654/README.md "Extension For JCode"
