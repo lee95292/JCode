@@ -27,6 +27,7 @@ sed -i "s/password:.*/password: $num/" ~/.config/code-server/config.yaml
 
 # Install extensions for code-server
 
+./install_extensions.sh
 
 # Restart code-server daemon
 sudo systemctl restart code-server@ubuntu.service
