@@ -46,3 +46,5 @@ sudo rm -rf /var/lib/cloud/instances/*/sem/config_scripts_user
 rm /home/ubuntu/.bash_history
 #sudo rm /root/.bash_history	#no need to execute. no file
 
+## 4.Install Extension
+./install_jota_agent.sh

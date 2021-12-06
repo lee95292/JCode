@@ -43,6 +43,8 @@ Created symlink /etc/systemd/system/default.target.wants/code-server@ubuntu.serv
 Waiting for creating config.yaml...
 Done!
 Created symlink /etc/systemd/system/multi-user.target.wants/watcher.service → /etc/systemd/system/watcher.service.
+Installing extensions...                                          #install_jota_agent.sh 를 실행
+Extension 'jcode-jota.vsix' was successfully installed.           #jcode-jota extension의 설치 성공
 ```
 
 # Note
