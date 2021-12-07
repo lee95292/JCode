@@ -24,7 +24,7 @@ vscode의 workspace를 이용하여 초기 디버그 설정 단계를 설명하�
 8. 작업 공간내에 .vscode폴더를 생성합니다.<br/><br/>
 <img src=https://user-images.githubusercontent.com/77586765/144979127-71bfdae8-6725-4cd7-ac32-4c4acfc4e04f.png width="200" height="80"/>
 
-10. .vscode 폴더 내에 tasks.json 파일을 생성하고 해당 내용을 붙여넣습니다.
+9. .vscode 폴더 내에 tasks.json 파일을 생성하고 해당 내용을 붙여넣습니다.
 ``` 
 {
 	"version": "2.0.0",
