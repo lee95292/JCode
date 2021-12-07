@@ -68,4 +68,4 @@ Extension 'jcode-jota.vsix' was successfully installed.           #jcode-jota ex
 
 [1]: https://github.com/GangSSun/JCode/blob/dd075dbd3eeef236084842b097bb3212a49f5855/Install_By_VSIX.md "Install_VSIX"
 [2]: https://github.com/GangSSun/JCode_Extension_Documentation/blob/99d8aa389d94fedcf78c8c9e96ca916ab9047654/README.md "Extension For JCode"
-[3]: https://github.com/brixno/JCode/blob/main/Setting_C/C++.md ""
+[3]: https://github.com/brixno/JCode/blob/main/Setting_C_C++.md ""
