@@ -24,7 +24,6 @@ Choose the extension you want to install. If not, press 0
 3. Python
 ...            
 ```
-(...에 추가할 언어 및 환경이 있다면 [install_extensions README.md][4]참고)
 
 4. JCloud 에서 제공하는 주소 및 포트 번호를 통해 JCode 접속  
    (예. cse-students 프로젝트의 경우, 브라우저에서 203.254.143.217:10xxx 로 접속.  
@@ -65,10 +64,8 @@ Extension 'jcode-jota.vsix' was successfully installed.           #jcode-jota ex
 - install.sh 는 ubuntu 계정으로 수행하여야 함
 - ⚠ C/C++ Extension을 사용하려는 경우 [Install_VSIX.md][1] 를 참고하여 설치하여야 제대로 작동함.
 - JCode에서 실행가능 한 Extension에 대해서 궁금하신 경우 [Extension_For_JCode][2] 를 참고.
-- JCode에서 C/C++ Debugging 을 수행하려는 경우 [C/C++ Setting For JCode][3] 를 참고.
-- install_extensions.sh 에 관한 설명은 [install_extensions README.md][4] 를 참고.
+- JCode에서 C/C++ 환경 설정 및 Debugging 을 수행하려는 경우 [C/C++ Setting For JCode][3] 를 참고.
 
 [1]: https://github.com/GangSSun/JCode/blob/dd075dbd3eeef236084842b097bb3212a49f5855/Install_By_VSIX.md "Install_VSIX"
 [2]: https://github.com/GangSSun/JCode_Extension_Documentation/blob/99d8aa389d94fedcf78c8c9e96ca916ab9047654/README.md "Extension For JCode"
-[3]: https://github.com/brixno/JCode/blob/main/HowToDebug_C.md ""
-[4]: https://github.com/brixno/JCode/blob/main/HowToDebug_C.md ""
+[3]: https://github.com/brixno/JCode/blob/main/Setting_C/C++.md ""
