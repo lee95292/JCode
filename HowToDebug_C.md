@@ -32,9 +32,103 @@ vscode의 workspace를 이용하여 초기 디버그 설정 단계를 설명하�
 ] 
 ```
 8. 작업 공간내에 .vscode폴더를 생성합니다.
-9. launch.json 파일을 생성하고 해당 내용을 붙여넣습니다.
-10. tasks.json 파일을 생성하고 해당 내용을 붙여넣습니다.
-11. 작업 공간내의 w
-12. 작업 공간내에 테스트로 사용될 c 파일을 생성하고 간단한 코드를 작성합니다.
-13. 사전에 설정한 커맨드로 빌드해줍니다. (본 문서에서는 shift+cmd+b 입니다.)
-14. 
+9. tasks.json 파일을 생성하고 해당 내용을 붙여넣습니다.
+``` 
+{
+	"version": "2.0.0",
+	"runner": "terminal",
+	"type": "shell",
+	"echoCommand": true,
+	"presentation": { "reveal": "always" },
+	"tasks": [
+		{
+      			"label": "C++: gcc build active file",
+      			"command": "g++",
+     			"args": [
+				    "${file}",
+        			"-g",
+        			"-o",
+      				"${fileDirname}/${fileBasenameNoExtension}"
+      			],
+			"group": "build",
+      			"problemMatcher": {
+				"fileLocation": [
+			 		"relative",
+					"${workspaceRoot}"
+				],
+			 	"pattern": {
+					"regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
+				 	"file": 1,
+					"line": 2,
+					"column": 3,
+					"severity" : 4,
+					"message" : 5,
+				}
+    			}
+		},
+		{
+			"label": "C: gcc build active file",
+      			"command": "gcc",
+     			"args": [
+				    "${file}",
+        			"-g",
+        			"-o",
+      				"${fileDirname}/${fileBasenameNoExtension}"
+      			],
+			"group": "build",
+      			"problemMatcher": {
+				    "fileLocation": [
+			 		    "relative",
+					    "${workspaceRoot}"
+				    ],
+			 	    "pattern": {
+					    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
+				 	    "file": 1,
+					    "line": 2,
+					    "column": 3,
+					    "severity" : 4,
+					    "message" : 5,
+				    }
+    			}
+		    },
+		{
+			"label": "execute",
+			"command": "cd ${fileDirname} && ./${fileBasenameNoExtension}",
+			"group": "test"
+		}
+	]
+}
+```
+10. launch.json 파일을 생성하고 해당 내용을 붙여넣습니다.
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "./${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C++: gcc build active file"
+        }
+    ]
+}
+```
+12. 작업 공간내의 w
+13. 작업 공간내에 테스트로 사용될 c 파일을 생성하고 간단한 코드를 작성합니다.
+14. 사전에 설정한 커맨드로 빌드해줍니다. (본 문서에서는 shift+cmd+b 입니다.)
+15. 
