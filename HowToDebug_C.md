@@ -16,23 +16,15 @@ vscode의 workspace를 이용하여 초기 디버그 설정 단계를 설명하�
    (대체로 /home/~/(작업 공간 이름)/workspace.code-workspace 입니다.<br/><br/>
 <img src=https://user-images.githubusercontent.com/77586765/144954897-cedbf361-36fd-46bf-83ca-97eac9b0e7cc.png width="467" height="300"/><br/><br/>
 <img src=https://user-images.githubusercontent.com/77586765/144955080-f4a42546-048d-4e87-8e1a-213f413dc660.png width="362" height="149"/><br/><br/>
-6. CTRL + P 단축키를 이용하여 keybindings.json 을 열어줍니다.<br/><br/>
-<img src=https://user-images.githubusercontent.com/77586765/144955206-5b97b784-f3da-4b6f-8cef-3f47880d4d49.png width="400" height="80"/><br/><br/>
-7. 하단의 내용을 입력해줍니다. 해당 내용은 shift+cmd+a 커맨드를 통해 c 파일을 빌드, shift+cmd+b 커맨드를 통해 c 파일을 실행한다는 의미입니다. 해당 커맨드가 아닌 다른 커맨드로 바꾸셔도 가능하지만, 반드시 기억하고 있어야 합니다.<br/><br/>
-``` // 키 바인딩을 이 파일에 넣어서 기본값 재정의auto[]
-[
-    {
-        "key": "shift+cmd+b",
-        "command": "workbench.action.tasks.build"
-    },
-    {
-        "key": "shift+cmd+a",
-        "command": "workbench.action.tasks.test"
-    }
-] 
-```
-8. 작업 공간내에 .vscode폴더를 생성합니다.
-9. .vscode 폴더 내에 tasks.json 파일을 생성하고 해당 내용을 붙여넣습니다.
+6. 아래 사진으로 이동 후에 "Tasks:run build task" 와 "Tasks:run test task"를 찾습니다.<br/><br/>
+<img src=https://user-images.githubusercontent.com/77586765/144982646-fc8f4449-3dd4-4652-b674-359434aba601.png width="600" height="500"/><br/><br/>
+7. build task 는 기본적으로 매핑이 되어있습니다. test task 만 따로 매핑을 해주고 기억합니다.<br/><br/>
+<img src=https://user-images.githubusercontent.com/77586765/144983130-204d4d56-404d-45a3-ae28-2cae719a2769.png width="400" height="200"/><br/><br/>
+
+8. 작업 공간내에 .vscode폴더를 생성합니다.<br/><br/>
+<img src=https://user-images.githubusercontent.com/77586765/144979127-71bfdae8-6725-4cd7-ac32-4c4acfc4e04f.png width="200" height="80"/>
+
+10. .vscode 폴더 내에 tasks.json 파일을 생성하고 해당 내용을 붙여넣습니다.
 ``` 
 {
 	"version": "2.0.0",
