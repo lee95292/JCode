@@ -27,7 +27,7 @@ JCode는 JCloud 인스턴스를 통해 생성할 수 있는 VSCode기반 온라�
 3. **아래 명령어를 통해 JCode 저장소를 Clone합니다.**
 
     ```bash
-    git clone https://github.com/hyunchan-park/JCode
+    git clone https://github.com/JBNU-JEduTools/JCode
     ```
 
     <img src="./resource/InstallGuide/3.png" width="600px" height="auto"/> <br/><br/><br/>
